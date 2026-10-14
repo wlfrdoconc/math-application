@@ -1,7 +1,6 @@
 package com.pluralsight;
 
-import static java.lang.Math.max;
-import static java.lang.Math.sqrt;
+import static java.lang.Math.*;
 
 public class MathApp {
     public static void main(String[] args) {
@@ -12,10 +11,10 @@ public class MathApp {
 
         // Determine which salary is greater using the Math.max() function
         // Create a new variable named highestSalary to store the result
-        double highSalary = Math.max(bobSalary, garySalary);
+        double highestSalary = Math.max(bobSalary, garySalary);
 
         // Print out the highest salary
-        System.out.println("The highest salary is $" + highSalary);
+        System.out.println("The highest salary is $" + highestSalary);
 
         // Question 2
         // Find and display the smallest of two variables named carPrice and truckPrice
@@ -30,13 +29,13 @@ public class MathApp {
         // Find and display the area of a circle whose radius is 7.25
         double circleRadius = 7.25;
         double circleArea = Math.PI * circleRadius * circleRadius;
-        System.out.println("The area of a circle whose radius is " + circleArea);
+        System.out.printf("The area of the circle is %.2f%n", circleArea);
 
         // Question 4
         // Find and display the square root of a variable after it is set to 5.0
         double setNumber = 5.0;
         double squareRoot = sqrt(setNumber);
-        System.out.println("The square root of " + setNumber + " is " + squareRoot);
+        System.out.printf("The square root of %.1f is %.2f%n", setNumber, squareRoot);
 
         // Question 5
         // Find and display the points (5, 10) and (85, 50)
@@ -46,11 +45,9 @@ public class MathApp {
         int x2 = 85;
         int y2 = 50;
 
-        double distance = Math.sqrt(
-                Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)
-        );
+        double distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 
-        System.out.println("The distance between the points is " + distance);
+        System.out.printf("The distance between the points is %.2f%n", distance);
 
         // Question 6
         // Find and display the absolute (positive) value of a variable
