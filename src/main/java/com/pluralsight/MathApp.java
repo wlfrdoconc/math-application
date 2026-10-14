@@ -46,12 +46,16 @@ public class MathApp {
         int x2 = 85;
         int y2 = 50;
 
-        System.out.println("The points are " + "(" + x1 + ", " + y1 + ") " + "and " + "(" + x2 + ", " + y2 + ")");
+        double distance = Math.sqrt(
+                Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)
+        );
+
+        System.out.println("The distance between the points is " + distance);
 
         // Question 6
         // Find and display the absolute (positive) value of a variable
-        int value = -25;
-        int absoluteValue = Math.abs(value);
+        double value = -3.8;
+        double absoluteValue = Math.abs(value);
         System.out.println("The absolute value of " + value + " is " + absoluteValue);
 
         // Question 7
@@ -72,7 +76,7 @@ public class MathApp {
         // Bonus: How many milliseconds are in 24 days?
 
         int secondsInMinutes = 60;
-        int millisecondsInSeconds = 1000;
+        long millisecondsInSeconds = 1000L; // Use long over int to hold the resulting number of milliseconds
         System.out.println("There are " + (givenDays * hoursInDays * minutesInHours * secondsInMinutes * millisecondsInSeconds) + " milliseconds in 24 days");
     }
 }
